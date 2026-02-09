@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Norina ❤️</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+
+    <!-- ====== JELSZÓ MODAL ====== -->
+<div id="passwordModal">
+  <div class="password-box">
+    <h2>Valentin-nap 💖</h2>
+    <p>Add meg a jelszót</p>
+
+    <input type="password" id="valentinPasswordInput" placeholder="Jelszó...">
+
+    <div class="password-buttons">
+      <button id="passwordCancel">Mégse</button>
+      <button id="passwordConfirm">Megnyitás</button>
+    </div>
+
+    <p id="passwordError">Hibás jelszó!</p>
+  </div>
+</div>
+
+
+<!-- =========================
+     KEZDŐOLDAL (TABOK)
+========================= -->
+<section id="homeSection" class="section active-section">
+  <h1>Sziaa Szerelmem! 💖</h1>
+  <p>Ez a mi kis közös oldalunk, ahova közös emlékeket tudunk feltölteni. Az oldal mindig bővülni fog változatos dolgokkal. 💌</p>
+
+  <div class="tabs">
+    <button class="tabBtn" data-target="egyuttSection">Ennyi ideje vagyunk együtt</button>
+    <button class="tabBtn" data-target="kepekSection">Közös képek</button>
+    <button class="tabBtn" data-target="naptarSection">Naptár</button>
+    <button class="tabBtn" data-target="honap6Section">6 hónap</button>
+    <button class="tabBtn" data-target="valentinSection">Valentin-nap</button>
+    <button class="tabBtn" data-target="rejtvenySection">Keresztrejtvény</button>
+  </div>
+
+  <!-- ✅ EZ MOST MÁR A GOMBOK ALATT, A SECTION-ÖN BELÜL VAN -->
+  <div class="homeExtra">
+
+
+    <div class="homeExtraImgWrapper">
+      <img src="assets/home.jpg" class="homeExtraImg" alt="Közös kép">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- =========================
+     VALENTIN FÜL (BEÁGYAZOTT EREDETI KÓD)
+========================= -->
+<section id="valentinSection" class="section">
+  <button class="backBtn" data-target="homeSection">🏠 Vissza</button>
+
+  <!-- ====== SZÍNPAD (a boríték + mainContent ugyanarra a helyre tud kerülni) ====== -->
+  <div id="valentinStage">
+
+    <!-- ====== LEVÉL RÉSZ ====== -->
+    <div id="letterPart">
+      <!-- Csak ez a rész halványul el OPEN után (a mainContent nem) -->
+      <div id="envelopeStage">
+        <div class="envlope-wrapper">
+          <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+
+            <div class="letter">
+              <div class="words line1"></div>
+              <div class="words line2"></div>
+              <div class="words line3"></div>
+              <div class="words line4"></div>
+            </div>
+
+            <div class="hearts">
+              <div class="heart a1"></div>
+              <div class="heart a2"></div>
+              <div class="heart a3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reset">
+          <button id="open">Open</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== MAIN 3 OLDAL (OVERLAY – nem a levél alatt jelenik meg) ====== -->
+    <div id="mainContent">
+
+      <div class="page first-page active">
+        <h1>Norina, leszel a Valentinom? ❤️</h1>
+        <img src="assets/kep1.jpg" class="main-img" alt="Kép 1">
+        <div class="buttons">
+          <button id="yesBtn">IGEN ❤️</button>
+          <button id="noBtn">NEM 🙈</button>
+        </div>
+      </div>
+
+      <div class="page second-page">
+        <h1>TÉNYLEEEG?? 😳❤️</h1>
+        <img src="assets/kep2.jpg" class="main-img" alt="Kép 2">
+        <button id="reallyBtn">IGEEN!! ❤️</button>
+      </div>
+
+      <div class="page final-page">
+        <h1>HELLYEAAAH!!</h1>
+        <h2>Boldog Valentin-napot Szívem! ❤️</h2>
+        <img src="assets/kep3.gif" class="main-img" alt="GIF">
+          <div class="valentineInviteCard">
+    <h2 class="inviteTitle">💌 Meghívás</h2>
+
+    <p class="inviteText">
+      Ha eljutottál idáig, akkor ezúttal szeretnélek meghívni  
+      <b>február 14-én Budapestre</b>, hogy együtt töltsünk el egy napot.
+    </p>
+
+    <p class="inviteText"><b>A programok:</b></p>
+
+    <ul class="inviteList">
+      <li>🗝️ Szabadulószoba — közösen választjuk ki, melyikbe menjünk</li>
+      <li>🍽️ Egy meglepetés ebéd — a hely titok… 🤫</li>
+    </ul>
+
+    <div class="inviteFooterHeart">💗</div>
+  </div>
+
+      </div>
+      
+
+      <audio id="music" src="assets/zene.mp3"></audio>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     KERESZTREJTVÉNY FÜL
+========================= -->
+<section id="rejtvenySection" class="section">
+  <button class="backBtn" data-target="homeSection">🏠 Vissza</button>
+
+  <!-- VISSZASZÁMLÁLÓ -->
+  <div id="countdownWrapper">
+    <h1>💖 Hamarosan! 💖</h1>
+    <p>Ez a meglepetés csak február 09-én 14:00-tól nyílik meg.</p>
+
+    <div id="countdownBox">
+      <div class="time-block"><span id="cdDays">00</span><small>nap</small></div>
+      <div class="time-block"><span id="cdHours">00</span><small>óra</small></div>
+      <div class="time-block"><span id="cdMinutes">00</span><small>perc</small></div>
+      <div class="time-block"><span id="cdSeconds">00</span><small>mp</small></div>
+    </div>
+
+    <p class="countdownHint">🗓️ Megnyitás: február 09. 14:00</p>
+  </div>
+
+  <!-- REJTVÉNY (csak feb 14 után) -->
+  <div id="crosswordWrapper" style="display:none;">
+    <h1>Keresztrejtvény 💌</h1>
+    <p>Írd be a megoldásokat a kockákba! A sorok <b>első betűi</b> adják a Valentin jelszót.</p>
+
+    <div id="crosswordGrid" class="crossword-grid"></div>
+
+    <div class="crossword-actions">
+      <button id="checkCrosswordBtn" class="tabBtn">Ellenőrzés</button>
+      <p id="crosswordResult" class="crossword-result"></p>
+    </div>
+
+    <h2>Kérdések</h2>
+    <ol id="crosswordClues" class="crossword-clues"></ol>
+  </div>
+</section>
+
+<!-- =========================
+     NAPTÁR FÜL
+========================= -->
+<section id="naptarSection" class="section">
+  <button class="backBtn" data-target="homeSection">🏠 Vissza</button>
+
+  <h1>Naptár 📅</h1>
+  <p>Ide irhatjuk be a közös programokat. 💖</p>
+
+  <div class="calendarCard">
+    <div class="calendarHeader">
+      <button id="calPrev" class="calNavBtn">◀</button>
+      <div id="calTitle" class="calTitle">—</div>
+      <button id="calNext" class="calNavBtn">▶</button>
+    </div>
+
+    <div class="calendarWeekdays">
+      <div>H</div><div>K</div><div>Sze</div><div>Cs</div><div>P</div><div>Szo</div><div>V</div>
+    </div>
+
+    <div id="calendarGrid" class="calendarGrid"></div>
+  </div>
+
+  <div class="dayCard">
+    <h2 id="selectedDateTitle">Válassz egy napot</h2>
+
+    <div class="eventForm">
+      <input id="eventInput" type="text" placeholder="Pl.: Mozi, vacsi, séta... 💖">
+      <button id="addEventBtn" class="tabBtn">Hozzáadás</button>
+    </div>
+
+    <div id="eventsList" class="eventsList"></div>
+  </div>
+</section>
+
+
+<!-- =========================
+     KÖZÖS KÉPEK FÜL
+========================= -->
+<section id="kepekSection" class="section">
+  <button class="backBtn" data-target="homeSection">🏠 Vissza</button>
+
+  <h1>Közös képek 📸</h1>
+  <p>Tölts fel közös képeket. 💖</p>
+
+  <div class="uploadCard">
+    <input id="photoInput" type="file" accept="image/*" multiple>
+    <button id="uploadBtn" class="tabBtn">Feltöltés</button>
+    <p id="uploadStatus" class="uploadStatus"></p>
+  </div>
+
+  <div class="galleryHeader">
+    <h2>Galéria</h2>
+    <button id="refreshGalleryBtn" class="miniBtn">Frissítés</button>
+  </div>
+
+  <div id="galleryGrid" class="galleryGrid"></div>
+</section>
+
+
+<section id="honap6Section" class="section">
+  <button class="backBtn" data-target="homeSection">🏠 Vissza</button>
+
+  <h1>6 hónap együtt 💖</h1>
+
+  <div class="loveLetterCard fadeInOnShow">
+    <img src="assets/home.jpg" class="loveHeaderImg" alt="Közös kép">
+
+    <div class="loveLetterTop">
+      <div class="loveBadge">Fél év ✨</div>
+      <div class="loveSub">A mi történetünk</div>
+    </div>
+
+    <div class="loveLetterText">
+      <p><b>Kedves Norina!</b></p>
+
+      <p>Elérkeztünk a 6. hónapunkhoz, fél év! Mindennél boldogabb vagyok, hogy ilyen erősek vagyunk, és már eddig eljutottunk közösen. Sok boldog közös hónapot, évet és egy egész közös életet kívánok magunknak ezután is!</p>
+
+      <p>Sok minden történt ebben az elmúlt fél évben, teljesen megváltoztattad az életemet. Sokat mondom, de tényleg igaz, hogy végre boldog lehetek a bőrömben mióta vagy nekem.</p>
+
+      <p>Kaptam az élettől a személyedben egy olyan kincset, aki okot ad rá, hogy kihozzam magamból a legjobbat, és törekedjek arra, hogy a legjobb ember legyek számodra. Már nem úgy látom magam, mint régen, kezdem meglátni magamban a jót, mert olyan sokszor mondod, hogy lassan kezdem én is elhinni, amit nagyon köszönök neked.</p>
+
+      <p>Igaz, nem egy fél éve ismerjük egymást, de azon a 8-án nagyon sok minden megváltozott. Egy olyan társra találtam benned, akire mindig támaszkodhatok, és tudom, hogy segíteni fog bármi történik. Örökké a kedvenc napom lesz az, amikor ott álltunk Szigeten, és megtörtént, aminek már hosszú ideje meg kellett volna, de na, féltem…</p>
+
+      <p>Szeretnék pár közös élményre visszatekinteni így fél év távlatában, amik azért voltak tökéletesek, mert közösen éltük át őket.</p>
+
+      <p>Imádtam mind a két fesztivált, ahol voltunk, egy olyan maradandó élmény maradt bennem<br>
+      Imádtam a kis hosszú hétvégénket Tokajban, csodás időt töltöttünk el, és annyira tökéletes volt. (Mindenképpen vissza fogunk menni a hegyet megmásszuk!)</p>
+
+      <p>Az összes budapesti utunk, a lepkemúzeum vagy a séta a Margit-szigeten, mind a „csak úgy” vásárlások, és persze az összes étterem, ahol eddig voltunk, van még mit kipipálni abból a városból a terveink közül!</p>
+
+      <p>Imádtam az összes itthoni programot, a közös főzéseket, a közös tökfaragást, a karácsonyi időszakot, az összes filmet a moziban.</p>
+
+      <p>Annyi mindent tudnék írni, mert bármit csinálunk közösen, az nekem egy kiszabadulás a hétköznapokból, és olyankor olyan, mintha csak abban a pillanatban lennénk, és semmi más nem számítana mint mindig, a miénk a világ olyankor is.</p>
+
+      <p>És abba még jobb belegondolni, hogy mennyi közös programtervünk van a jövőre nézve. Itt van a nyakunkon a síelés, aztán a német utazás már annyira várom a közös emlékek megszerzését, hogy nem férek a bőrömbe.</p>
+
+      <p>Szeretek a közös terveinken gondolkodni, mind azokon, amiket közösen végre akarunk vinni, mint például az összeköltözés, aztán a lánykérés és az esküvő, majd az első gyermekünk születése. Tudom, mind távoli dolog, de én mindent kristálytisztán látok magam előtt, és ilyenkor mindig könnybe lábad a szemem, amiért ilyen szerencsés vagyok, hogy már ilyen fiatalon megtaláltuk egymást. Az életem szerelme vagy, Norina, és veled akarom leélni az egész életem. Mindent veled akarok elérni ebben az életben, tudom, hogy te vagy az igazi számomra. Szeretném, hogy te legyél a feleségem, a gyerekeim anyukája — mindent és mindent veled.</p>
+
+      <p>A világ legboldogabb, „öreg bőrbe bújt kisfiúja” vagyok melletted, és nem tudom elégszer elmondani, mennyire hálás vagyok érted. Egy ajándék vagy nekem, a legfontosabb ember az életemben.</p>
+
+      <p>Még egyszer kívánok magunknak egy egész életet egymás mellett!</p>
+
+      <p><b>Mindennél jobban szeretlek, kis cukorbogyóm.</b><br>
+      <b>Szeretlek téged, Norina!</b><br>
+      <b>Szeretem magunkat!</b> 💖</p>
+    </div>
+
+    <div class="loveFooter">
+      <span class="loveFooterHeart">💗</span>
+      <span>6 hónap • és ez még csak a kezdet</span>
+      <span class="loveFooterHeart">💗</span>
+            <div class="bibleQuoteCard">
+        <p class="bibleQuote">
+          “We love each other because he loved us first.”
+        </p>
+        <p class="bibleRef">
+          ~ 1 John 4:19
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     EGYÜTT TÖLTÖTT IDŐ FÜL (SZÁMLÁLÓ)
+========================= -->
+<section id="egyuttSection" class="section">
+  <button class="backBtn" data-target="homeSection">🏠 Vissza</button>
+
+  <h1>Ennyi ideje vagyunk együtt 💖</h1>
+
+  <div class="counterBox">
+    <div class="counterBig" id="counterLine1">—</div>
+    <div class="counterSmall" id="counterLine2">—</div>
+  </div>
+
+  <p class="counterHint">Kezdet: 2025.08.08. 18:25, Sziget</p>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/script2.js"></script>
+<script src="js/konfetti.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/app.js"></script>
+<script src="js/rejtveny.js"></script>
+<script type="module" src="js/kepek_firebase.js"></script>
+<script src="js/naptar.js"></script>
+
+
+
+</body>
+</html>
+
