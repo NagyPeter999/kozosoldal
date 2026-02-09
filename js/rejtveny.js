@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cdSeconds = document.getElementById("cdSeconds");
 
   // 👉 CÉLIDŐ: 2026. február 14. 00:00 (ha más év kell, itt átírod)
-  const target = new Date("2026-02-09T14:45:00");
+  const target = new Date("2026-02-09T14:00:00");
 
   function updateCountdown() {
     const now = new Date();
@@ -191,3 +191,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
